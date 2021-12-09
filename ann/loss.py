@@ -1,3 +1,8 @@
+"""@package docstring
+This module contains all the los functions
+"""
+
+
 import numpy as np
 
 class Cross_Ent_Loss:

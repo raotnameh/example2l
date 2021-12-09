@@ -1,3 +1,7 @@
+"""@package docstring
+This module contains the different dataset download functions.
+"""
+
 import numpy as np
 import requests, gzip, os, hashlib
 

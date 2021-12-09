@@ -1,3 +1,7 @@
+"""@package docstring
+This module contains all the different layers used in neural networks
+"""
+
 import numpy as np
 
 class Linear:

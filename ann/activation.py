@@ -1,3 +1,7 @@
+"""@package docstring
+This module contains the different activation functions used in AI. 
+"""
+
 import numpy as np
 
 class Relu:
