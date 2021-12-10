@@ -1,9 +1,8 @@
 import numpy as np
-from tqdm.auto import tqdm
+import pandas as pd
 from ann.layer import Linear
 from ann.loss import Cross_Ent_Loss
 from ann.activation import Relu, Sigmoid
-
 
 class Net(Linear,Relu,Sigmoid,Cross_Ent_Loss):
     """
@@ -94,11 +93,11 @@ class Net(Linear,Relu,Sigmoid,Cross_Ent_Loss):
         Calculate the cross entropy loss.
         """
         true = np.zeros_like(pred)
-        true[index] = 1
+        true[int(index[0][0])] = 1
         loss = self.cross_ent_loss.forward_loss(pred,true)
         return loss
     
-    def evaluate(self,X=None,Y=None):
+    def evaluate(self,X=None,Y=None,save=True):
         """
         Evaulate the created model given the test data. 
         """
@@ -106,13 +105,23 @@ class Net(Linear,Relu,Sigmoid,Cross_Ent_Loss):
             self.X_test = X
             self.Y_test = Y
         pred = 0
+        if save: dummy_pred, dummy_true = [], []
         for k,_ in enumerate(self.X_test):
             x, y = self.X_test[k].reshape(-1,1), self.Y_test[k][0]
             logits = self.forward(x)
             if np.argmax(logits) == y:
                 pred += 1
-        print(f"Accuracy of the model is: {pred/k}")
             
+            if save: 
+                dummy_pred.append(np.argmax(logits))
+                dummy_true.append(y)
+
+        print(f"Accuracy of the model is: {pred/k}")
+
+        if save: 
+            out = pd.DataFrame(list(zip(dummy_true, dummy_pred)),columns =['True', 'Pred'])
+            out.to_csv('data/test_pred_true.csv', encoding='utf-8', index=False)
+                
     def train(self,step_u=1,step=100000,test=False):
         """
         Train the created model given the input.
@@ -133,7 +142,7 @@ class Net(Linear,Relu,Sigmoid,Cross_Ent_Loss):
                     self.update()
                     
                 if (k+1) %step == 0: 
-                    print(f"Loss after epoch({ep+1})-iteration({k+1}/{len(self.X)}) is \t\t :{dummy/step_u}")
+                    print(f"Loss after epoch({ep+1})-iteration({k+1}/{len(self.X)}) is \t\t :{dummy/step}")
                     dummy = 0
                 if test: break
 
