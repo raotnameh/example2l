@@ -1,14 +1,16 @@
-##### README
-Tested on Ubuntu 20 and python>=3.8
-This project is done for the CSE600A (Object Oriented Programming and Design) course requirement.
+README  
+Tested on Ubuntu 20 and python>=3.8  
+This project is done for the CSE600A (Object Oriented Programming and Design) course requirement for group number 41.   
 ### Overview
 1. In this work we implement a simple 2 layer feed forwad arrtificial neural netowork (ANN) from scratch using numpy only. Gradients are calculated locally and passed for downstream calculations similarly to this work: http://cs231n.stanford.edu/slides/2021/discussion_2_backprop.pdf.
 2. For the hierarchy of different classes refer to the latex/refman.pdf file. 
 3. For the profiler file refer to the test/test.txt
 4. example2l (2l = 2 layer) class has implements the training and testting of the 2 layer network.   
 5. We achieve an accuracy of 95 percent with these hyperparameters.   
-/
-#### Model specifications
+6. Doxygen file is at latex/refman.pdf
+
+
+### Model specifications
 
 ```
 i_d = 784 # input dimension    
