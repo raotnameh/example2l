@@ -2,7 +2,7 @@
 ##### This project is done for the CSE600A (Object Oriented Programming and Design) course requirement.
 ### Overview
 1. In this work we implement a simple 2 layer feed forwad arrtificial neural netowork (ANN) from scratch using numpy only. Gradients are calculated locally and passed for downstream calculations similarly to this work: http://cs231n.stanford.edu/slides/2021/discussion_2_backprop.pdf.
-2. For the hierchy of different classes refer to the latex/refman.pdf file. 
+2. For the hierarchy of different classes refer to the latex/refman.pdf file. 
 3. For the profiler file refer to the test/test.txt
 
 #### Model specifications
