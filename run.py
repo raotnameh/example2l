@@ -24,6 +24,6 @@ profiler.disable()
 s = io.StringIO()
 stats = pstats.Stats(profiler,stream=s).sort_stats('ncalls')
 stats.print_stats()
-with open('test/test.txt', 'w+') as f:
+with open('test/profiler.txt', 'w+') as f:
     f.write(s.getvalue())
 
