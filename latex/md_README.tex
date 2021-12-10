@@ -1,0 +1,5 @@
+This is a simple example of 2 layer feed forwad ANN.\hypertarget{md_README_autotoc_md0}{}\doxysubsubsection{Creating the wheel files.}\label{md_README_autotoc_md0}
+python setup.\+py sdist bdist\+\_\+wheel\hypertarget{md_README_autotoc_md1}{}\doxysubsubsection{Creating the environment to be used.}\label{md_README_autotoc_md1}
+\`{} conda env create -\/f environment.\+yml \textbackslash{} conda activate oopd \textbackslash{} pip install dist/ann-\/0.\+0.\+1-\/py3-\/none-\/any.\+whl \`{} \hypertarget{md_README_autotoc_md2}{}\doxysubsubsection{Training the example 2 layerd net.}\label{md_README_autotoc_md2}
+\`{} tar -\/xvf data.\+tar.\+gz \textbackslash{} python run.\+py \`{} \hypertarget{md_README_autotoc_md3}{}\doxysubsubsection{Saving the prediction to sql.}\label{md_README_autotoc_md3}
+\`{} .mode csv \textbackslash{} .import data/test\+\_\+pred\+\_\+true.\+csv oopd \textbackslash{} .save data/oopd\+\_\+pred\+\_\+true.\+db \`{} 
