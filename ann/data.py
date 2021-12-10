@@ -10,7 +10,7 @@ import sqlite3
 
 class Mnist:
     """
-    Download the MNIST dataset and save them in a given path.
+    Download the MNIST dataset and load it in a required format.
 
     Args:
         path: where to save the dataset.
