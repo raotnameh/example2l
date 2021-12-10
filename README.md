@@ -1,4 +1,4 @@
-##### Tesdted on Ubuntu 20 and python>=3.8
+##### Tested on Ubuntu 20 and python>=3.8
 ##### This project is done for the CSE600A (Object Oriented Programming and Design) course requirement.
 ### Overview
 1. In this work we implement a simple 2 layer feed forwad arrtificial neural netowork (ANN) from scratch using numpy only. Gradients are calculated locally and passed for downstream calculations similarly to this work: http://cs231n.stanford.edu/slides/2021/discussion_2_backprop.pdf.
