@@ -5,8 +5,8 @@ This is a simple example of 2 layer feed forwad ANN.
 
 ### Creating the environment to be used. 
 `
-conda env create -f environment.yml
-conda activate oopd
+conda env create -f environment.yml \n
+conda activate oopd \n
 pip install dist/ann-0.0.1-py3-none-any.whl
 `
 
