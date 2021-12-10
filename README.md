@@ -6,6 +6,7 @@
 3. For the profiler file refer to the test/test.txt
 
 #### Model specifications
+```
 i_d = 784 # input dimension  
 m_d = 100 # no of cells in the mid layer  
 o_d = 10 # output dimension  
@@ -15,7 +16,7 @@ act = 'relu' # activation type
 lr = 0.00001 # learning rate  
 
 X,Y,X_test,Y_test = train_features, train_label, test_features, test_label  
-
+```
 * example2l (2l > 2 layer) class has implements the training and testting of the 2 layer network.   
 
 * We achieve an accuracy of 95 percent with these hyperparameters.   
