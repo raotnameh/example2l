@@ -28,7 +28,7 @@ class Mnist:
     
     def from_sql(self,train_db='oopd_train.db',test_db='oopd_test.db'):
         """
-        Upload the load from a sql database
+        Load from a given sql database. 
         """
         X, Y = self.sql_database(train_db)
         X_test, Y_test = self.sql_database(test_db)

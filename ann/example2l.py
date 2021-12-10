@@ -6,7 +6,8 @@ from ann.activation import Relu, Sigmoid
 
 class Net(Linear,Relu,Sigmoid,Cross_Ent_Loss):
     """
-    Create a sample 2 layer feed forward artitifical neural network (ANN).
+    Inheritance, Encapsulation, Polymorphism.
+    Create a 2 layer feed forward artifical neural network (ANN).
 
     Args:
         i_d: input dimension.

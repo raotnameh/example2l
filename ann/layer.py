@@ -13,8 +13,8 @@ class Linear:
         o_d > output dimension
 
     Attributes:
-        weight: the leranable weight of the module.
-        bias: the leranable bias of the module.
+        weight: the learnable weight of the module.
+        bias: the learnable bias of the module.
 
         weight_grad: gradient for the weight matrix.
         bias_grad: gradient for the bias matrix.
@@ -65,6 +65,6 @@ class Linear:
 
     def reset_l(self,):
         """
-        To reset th gradients to zero.
+        To reset the gradients to zero.
         """
         self.weight_grad = np.zeros_like(self.weight)

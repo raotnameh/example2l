@@ -36,7 +36,7 @@ class Cross_Ent_Loss:
     
     def softmax(self,x):
         """ 
-        Implements the softmax dunction element wise.
+        Implements the softmax function element wise.
         """
         z = np.exp(x)
         self.z = z / sum(z)
