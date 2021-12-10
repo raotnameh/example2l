@@ -1,0 +1,77 @@
+\hypertarget{classann_1_1data_1_1Mnist}{}\doxysection{ann.\+data.\+Mnist Class Reference}
+\label{classann_1_1data_1_1Mnist}\index{ann.data.Mnist@{ann.data.Mnist}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classann_1_1data_1_1Mnist_a542e8ef9e6189053da9531aaa557b5fb}\label{classann_1_1data_1_1Mnist_a542e8ef9e6189053da9531aaa557b5fb}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, path)
+\item 
+def \mbox{\hyperlink{classann_1_1data_1_1Mnist_a4f29a5c510a632e5b8c53643da421d05}{from\+\_\+sql}} (self, train\+\_\+db=\textquotesingle{}oopd\+\_\+train.\+db\textquotesingle{}, test\+\_\+db=\textquotesingle{}oopd\+\_\+test.\+db\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classann_1_1data_1_1Mnist_a241100c0ab5e5e9d45b08c4ff306854d}{data}} (self)
+\item 
+def \mbox{\hyperlink{classann_1_1data_1_1Mnist_a63d26859c68f1e9956fbf7f08a6415f4}{fetch}} (self, url)
+\item 
+def \mbox{\hyperlink{classann_1_1data_1_1Mnist_a4bfff09f1948d713590e094a133a3020}{sql\+\_\+database}} (self, path\+\_\+to\+\_\+db)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classann_1_1data_1_1Mnist_a31e63968d28a85be0b868b7c067f03c1}\label{classann_1_1data_1_1Mnist_a31e63968d28a85be0b868b7c067f03c1}} 
+{\bfseries path}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Download the MNIST dataset and load it in a required format.
+
+Args:
+    path: where to save the dataset.
+
+Return:
+    X: training input [60000,784]
+    Y: training output [60000,1]
+
+    X_test = test input [10000,784]
+    Y_test = test output [10000,1]
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classann_1_1data_1_1Mnist_a241100c0ab5e5e9d45b08c4ff306854d}\label{classann_1_1data_1_1Mnist_a241100c0ab5e5e9d45b08c4ff306854d}} 
+\index{ann.data.Mnist@{ann.data.Mnist}!data@{data}}
+\index{data@{data}!ann.data.Mnist@{ann.data.Mnist}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily def ann.\+data.\+Mnist.\+data (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Download the data from source
+Save it to the disk in self.path/ directory\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1data_1_1Mnist_a63d26859c68f1e9956fbf7f08a6415f4}\label{classann_1_1data_1_1Mnist_a63d26859c68f1e9956fbf7f08a6415f4}} 
+\index{ann.data.Mnist@{ann.data.Mnist}!fetch@{fetch}}
+\index{fetch@{fetch}!ann.data.Mnist@{ann.data.Mnist}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}}
+{\footnotesize\ttfamily def ann.\+data.\+Mnist.\+fetch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{url }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Downloads the MNIST data given the url.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1data_1_1Mnist_a4f29a5c510a632e5b8c53643da421d05}\label{classann_1_1data_1_1Mnist_a4f29a5c510a632e5b8c53643da421d05}} 
+\index{ann.data.Mnist@{ann.data.Mnist}!from\_sql@{from\_sql}}
+\index{from\_sql@{from\_sql}!ann.data.Mnist@{ann.data.Mnist}}
+\doxysubsubsection{\texorpdfstring{from\_sql()}{from\_sql()}}
+{\footnotesize\ttfamily def ann.\+data.\+Mnist.\+from\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{train\+\_\+db = {\ttfamily \textquotesingle{}oopd\+\_\+train.db\textquotesingle{}},  }\item[{}]{test\+\_\+db = {\ttfamily \textquotesingle{}oopd\+\_\+test.db\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load from a given sql database. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1data_1_1Mnist_a4bfff09f1948d713590e094a133a3020}\label{classann_1_1data_1_1Mnist_a4bfff09f1948d713590e094a133a3020}} 
+\index{ann.data.Mnist@{ann.data.Mnist}!sql\_database@{sql\_database}}
+\index{sql\_database@{sql\_database}!ann.data.Mnist@{ann.data.Mnist}}
+\doxysubsubsection{\texorpdfstring{sql\_database()}{sql\_database()}}
+{\footnotesize\ttfamily def ann.\+data.\+Mnist.\+sql\+\_\+database (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path\+\_\+to\+\_\+db }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read the data from a sql database.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ann/data.\+py\end{DoxyCompactItemize}

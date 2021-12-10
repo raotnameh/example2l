@@ -1,0 +1,105 @@
+\hypertarget{classann_1_1layer_1_1Linear}{}\doxysection{ann.\+layer.\+Linear Class Reference}
+\label{classann_1_1layer_1_1Linear}\index{ann.layer.Linear@{ann.layer.Linear}}
+Inheritance diagram for ann.\+layer.\+Linear\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classann_1_1layer_1_1Linear}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classann_1_1layer_1_1Linear_ac2bd3f14e21382161b9d8a1df063de63}\label{classann_1_1layer_1_1Linear_ac2bd3f14e21382161b9d8a1df063de63}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, i\+\_\+d, o\+\_\+d)
+\item 
+def \mbox{\hyperlink{classann_1_1layer_1_1Linear_a39ab836014a17c544f057b8888ff24d9}{forward\+\_\+l}} (self, x)
+\item 
+def \mbox{\hyperlink{classann_1_1layer_1_1Linear_a5d7909ae2fb7f78b5450f0551250b29d}{backward\+\_\+l}} (self, x)
+\item 
+def \mbox{\hyperlink{classann_1_1layer_1_1Linear_a76d5f73aedc089cfb5a4e2cd08727c99}{update\+\_\+l}} (self, alpha)
+\item 
+def \mbox{\hyperlink{classann_1_1layer_1_1Linear_ac7ea5afc537337839822e2255871b314}{reset\+\_\+l}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classann_1_1layer_1_1Linear_a921cfe3f5d798f5503fee77d95e07b37}\label{classann_1_1layer_1_1Linear_a921cfe3f5d798f5503fee77d95e07b37}} 
+{\bfseries weight}
+\item 
+\mbox{\Hypertarget{classann_1_1layer_1_1Linear_a33aff4b96b4f8c5fb7b76c2002736b2f}\label{classann_1_1layer_1_1Linear_a33aff4b96b4f8c5fb7b76c2002736b2f}} 
+{\bfseries bias}
+\item 
+\mbox{\Hypertarget{classann_1_1layer_1_1Linear_a7f9ddb530ca50f7b5cad5f6e8e9a4608}\label{classann_1_1layer_1_1Linear_a7f9ddb530ca50f7b5cad5f6e8e9a4608}} 
+{\bfseries weight\+\_\+grad}
+\item 
+\mbox{\Hypertarget{classann_1_1layer_1_1Linear_aa667e2be7c48eaf92418d9c35c442cc0}\label{classann_1_1layer_1_1Linear_aa667e2be7c48eaf92418d9c35c442cc0}} 
+{\bfseries bias\+\_\+grad}
+\item 
+\mbox{\Hypertarget{classann_1_1layer_1_1Linear_ad07ceaf284401b34bdc251fbf7163ef2}\label{classann_1_1layer_1_1Linear_ad07ceaf284401b34bdc251fbf7163ef2}} 
+{\bfseries x}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This class implements the linear layer.
+
+Args: 
+    i_d > input dimension
+    o_d > output dimension
+
+Attributes:
+    weight: the learnable weight of the module.
+    bias: the learnable bias of the module.
+
+    weight_grad: gradient for the weight matrix.
+    bias_grad: gradient for the bias matrix.
+
+Examples:
+ >>>> m = ann.Linear(10,20)
+ >>>> inp = np.random.rand(i_d,1)
+ >>>> out = m.forward(inp)
+ >>>> out.shape
+ [o_d,1]\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classann_1_1layer_1_1Linear_a5d7909ae2fb7f78b5450f0551250b29d}\label{classann_1_1layer_1_1Linear_a5d7909ae2fb7f78b5450f0551250b29d}} 
+\index{ann.layer.Linear@{ann.layer.Linear}!backward\_l@{backward\_l}}
+\index{backward\_l@{backward\_l}!ann.layer.Linear@{ann.layer.Linear}}
+\doxysubsubsection{\texorpdfstring{backward\_l()}{backward\_l()}}
+{\footnotesize\ttfamily def ann.\+layer.\+Linear.\+backward\+\_\+l (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Implements the  Backprop calculations given the gradeints.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1layer_1_1Linear_a39ab836014a17c544f057b8888ff24d9}\label{classann_1_1layer_1_1Linear_a39ab836014a17c544f057b8888ff24d9}} 
+\index{ann.layer.Linear@{ann.layer.Linear}!forward\_l@{forward\_l}}
+\index{forward\_l@{forward\_l}!ann.layer.Linear@{ann.layer.Linear}}
+\doxysubsubsection{\texorpdfstring{forward\_l()}{forward\_l()}}
+{\footnotesize\ttfamily def ann.\+layer.\+Linear.\+forward\+\_\+l (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Implements the forward calculation given an input. 
+
+Input: matrix with shape [dim,1]
+ouput: matrix with shape [o_d,1]
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1layer_1_1Linear_ac7ea5afc537337839822e2255871b314}\label{classann_1_1layer_1_1Linear_ac7ea5afc537337839822e2255871b314}} 
+\index{ann.layer.Linear@{ann.layer.Linear}!reset\_l@{reset\_l}}
+\index{reset\_l@{reset\_l}!ann.layer.Linear@{ann.layer.Linear}}
+\doxysubsubsection{\texorpdfstring{reset\_l()}{reset\_l()}}
+{\footnotesize\ttfamily def ann.\+layer.\+Linear.\+reset\+\_\+l (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}To reset the gradients to zero.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1layer_1_1Linear_a76d5f73aedc089cfb5a4e2cd08727c99}\label{classann_1_1layer_1_1Linear_a76d5f73aedc089cfb5a4e2cd08727c99}} 
+\index{ann.layer.Linear@{ann.layer.Linear}!update\_l@{update\_l}}
+\index{update\_l@{update\_l}!ann.layer.Linear@{ann.layer.Linear}}
+\doxysubsubsection{\texorpdfstring{update\_l()}{update\_l()}}
+{\footnotesize\ttfamily def ann.\+layer.\+Linear.\+update\+\_\+l (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alpha }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}To update the Gradients of each layer.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ann/layer.\+py\end{DoxyCompactItemize}

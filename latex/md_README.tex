@@ -1,0 +1,61 @@
+README ~\newline
+ Tested on Ubuntu 20 and python\texorpdfstring{$>$}{>}=3.\+8 ~\newline
+ This work is done for the CSE600A (Object Oriented Programming and Design) course requirement for group number 41. The problem statement is given in problem.\+pdf. ~\newline
+\hypertarget{md_README_autotoc_md0}{}\doxysubsubsection{Overview}\label{md_README_autotoc_md0}
+
+\begin{DoxyEnumerate}
+\item In this work we implement a simple 2 layer feed-\/forward arrtificial neural network (ANN) from scratch using numpy only. Gradients are calculated are calculated similarly to this work\+: \href{http://cs231n.stanford.edu/slides/2021/discussion_2_backprop.pdf}{\texttt{ http\+://cs231n.\+stanford.\+edu/slides/2021/discussion\+\_\+2\+\_\+backprop.\+pdf}}.
+\item Doxygen file is at latex/refman.\+pdf
+\item For the profiler file refer to the test/test.\+txt
+\item ann/example2l (2l = 2 layer) class has the implementation of training and testing of the 2 layer network. ~\newline
+
+\item We achieve an accuracy of 95 percent when trained for 1 epoch. ~\newline
+
+\item Data and output predictions are in data folder (after you erxtract the data.\+tar.\+gz).
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md1}{}\doxysubsubsection{Model specifications}\label{md_README_autotoc_md1}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{i\_d = 784 \# input dimension    }
+\DoxyCodeLine{m\_d = 100 \# no of cells in the mid layer    }
+\DoxyCodeLine{o\_d = 10 \# output dimension    }
+\DoxyCodeLine{}
+\DoxyCodeLine{epoch = 1 \# we train for 1 epoch only    }
+\DoxyCodeLine{act = 'relu' \# activation type      }
+\DoxyCodeLine{lr = 0.00001 \# learning rate    }
+\DoxyCodeLine{}
+\DoxyCodeLine{X,Y,X\_test,Y\_test = train\_features, train\_label, test\_features, test\_label  }
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md2}{}\doxysubsubsection{Run these commands to set up the environment. Conda need to be installed. If not than you have to manually install the dependencies.}\label{md_README_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{conda env create -\/f environment.yml    }
+\DoxyCodeLine{conda activate oopd     }
+\DoxyCodeLine{python setup.py sdist bdist\_wheel      }
+\DoxyCodeLine{pip install dist/ann-\/0.0.1-\/py3-\/none-\/any.whl    }
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md3}{}\doxysubsubsection{Run these commands to extract the MNIST dataset and to train the example network on it.}\label{md_README_autotoc_md3}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{tar -\/xvf data.tar.gz    }
+
+\end{DoxyCode}
+ This will extract the database required to train the network on MNIST dataset.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python run.py  }
+
+\end{DoxyCode}
+
+
+After the traning the predicions and their true values will be saved in data/test\+\_\+pred\+\_\+true.\+csv file. To conver this into a sql database run the below commands.\hypertarget{md_README_autotoc_md4}{}\doxysubsubsection{Run these commands to save the prediction to a sql database.}\label{md_README_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.mode csv }
+\DoxyCodeLine{.import data/test\_pred\_true.csv oopd  }
+\DoxyCodeLine{.save data/oopd\_pred\_true.db   }
+
+\end{DoxyCode}
+ 
