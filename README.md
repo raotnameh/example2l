@@ -1,7 +1,7 @@
 This is a simple example of 2 layer feed forwad ANN.
 
 ### Creating the wheel files. 
-1. Run python setup.py sdist bdist_wheel
+1. python setup.py sdist bdist_wheel
 
 ### Creating the environment to be used. 
 1. conda env create -f environment.yml
@@ -12,3 +12,8 @@ This is a simple example of 2 layer feed forwad ANN.
 ### Training the example 2 layerd net. 
 1. tar -xvf data.tar.gz 
 2. python run.py
+
+### Saving the prediction to sql. 
+1. .mode csv
+2. .import data/test_pred_true.csv oopd
+3. .save data/oopd_pred_true.db
