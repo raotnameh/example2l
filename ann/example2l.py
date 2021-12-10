@@ -113,31 +113,33 @@ class Net(Linear,Relu,Sigmoid,Cross_Ent_Loss):
                 pred += 1
         print(f"Accuracy of the model is: {pred/k}")
             
-    def train(self,step_u=1,step=100000):
+    def train(self,step_u=1,step=100000,test=False):
         """
         Train the created model given the input.
         """
         self.reset()
         for ep in range(self.epoch):
-            dummy = 0
-            for k,_ in tqdm(enumerate(self.X),total=len(self.X)):
+            dummy,dummy_e = 0,0
+            for k,_ in enumerate(self.X):
                 x, y = self.X[k].reshape(-1,1), self.Y[k].reshape(-1,1)
                 logits = self.forward(x)
                 loss = self.loss(logits,y)
                 dummy += loss
+                dummy_e += loss
+
                 self.backward()
                 
                 if (k+1) % step_u == 0:
                     self.update()
                     
                 if (k+1) %step == 0: 
-                    print(f"Loss after an update is :{dummy/step_u}")
+                    print(f"Loss after epoch({ep+1})-iteration({k+1}/{len(self.X)}) is \t\t :{dummy/step_u}")
                     dummy = 0
+                if test: break
 
             self.alpha *= 0.5
+            print(f"Loss after epoch {ep+1} is :{dummy_e/k}")
             print(f"Learning rate after epoch {ep+1} is :{self.alpha}")        
             self.evaluate()
-
-        self.evaluate()
-
+            dummy_e = 0
 
