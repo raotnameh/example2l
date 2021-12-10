@@ -4,10 +4,11 @@ This is a simple example of 2 layer feed forwad ANN.
 1. python setup.py sdist bdist_wheel
 
 ### Creating the environment to be used. 
-1. conda env create -f environment.yml
-2. conda activate oopd
-3. pip install dist/ann-0.0.1-py3-none-any.whl
-
+`
+conda env create -f environment.yml
+conda activate oopd
+pip install dist/ann-0.0.1-py3-none-any.whl
+`
 
 ### Training the example 2 layerd net. 
 1. tar -xvf data.tar.gz 
