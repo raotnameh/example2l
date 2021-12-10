@@ -1,9 +1,11 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
-\contentsline {chapter}{\numberline {1}README}{1}{chapter.1}
-\contentsline {subsubsection}{\numberline {1.0.0.1}Creating the wheel files.}{1}{subsubsection.1.0.0.1}
-\contentsline {subsubsection}{\numberline {1.0.0.2}Creating the environment to be used.}{1}{subsubsection.1.0.0.2}
-\contentsline {subsubsection}{\numberline {1.0.0.3}Training the example 2 layerd net.}{1}{subsubsection.1.0.0.3}
-\contentsline {subsubsection}{\numberline {1.0.0.4}Saving the prediction to sql.}{1}{subsubsection.1.0.0.4}
+\contentsline {chapter}{\numberline {1}Tesdted on Ubuntu 20 and python$>$=3.8}{1}{chapter.1}
+\contentsline {paragraph}{\numberline {1.0.0.0.1}This project is done for the CSE600\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A (\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Object Oriented Programming and Design) course requirement.}{1}{paragraph.1.0.0.0.1}
+\contentsline {subsection}{\numberline {1.0.1}Overview}{1}{subsection.1.0.1}
+\contentsline {subsubsection}{\numberline {1.0.1.1}Model specifications}{1}{subsubsection.1.0.1.1}
+\contentsline {subsection}{\numberline {1.0.2}Run these commands to set up the environment. We need conda to be installed. If not than you have to manually install the dependencies.}{1}{subsection.1.0.2}
+\contentsline {subsection}{\numberline {1.0.3}Run these commands to extract the MNIST dataset and to train the example network on it.}{1}{subsection.1.0.3}
+\contentsline {subsection}{\numberline {1.0.4}Run these commands to save the prediction to a sql database.}{2}{subsection.1.0.4}
 \contentsline {chapter}{\numberline {2}Namespace Index}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Namespace List}{3}{section.2.1}
 \contentsline {chapter}{\numberline {3}Hierarchical Index}{5}{chapter.3}

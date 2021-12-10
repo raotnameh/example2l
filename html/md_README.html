@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: README</title>
+<title>My Project: Tesdted on Ubuntu 20 and python&gt;=3.8</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,23 +62,51 @@ $(function() {
 
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">README </div></div>
+  <div class="headertitle"><div class="title">Tesdted on Ubuntu 20 and python&gt;=3.8 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >This is a simple example of 2 layer feed forwad ANN.</p>
-<h3><a class="anchor" id="autotoc_md0"></a>
-Creating the wheel files.</h3>
-<p >python setup.py sdist bdist_wheel</p>
-<h3><a class="anchor" id="autotoc_md1"></a>
-Creating the environment to be used.</h3>
-<p >` conda env create -f environment.yml \ conda activate oopd \ pip install dist/ann-0.0.1-py3-none-any.whl ` </p>
-<h3><a class="anchor" id="autotoc_md2"></a>
-Training the example 2 layerd net.</h3>
-<p >` tar -xvf data.tar.gz \ python run.py ` </p>
+<div class="textblock"><h4><a class="anchor" id="autotoc_md1"></a>
+This project is done for the CSE600A (Object Oriented Programming and Design) course requirement.</h4>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Overview</h2>
+<ol type="1">
+<li>In this work we implement a simple 2 layer feed forwad arrtificial neural netowork (ANN) from scratch using numpy only. Gradients are calculated locally and passed for downstream calculations similarly to this work: <a href="http://cs231n.stanford.edu/slides/2021/discussion_2_backprop.pdf">http://cs231n.stanford.edu/slides/2021/discussion_2_backprop.pdf</a>.</li>
+<li>For the hierchy of different classes refer to the latex/refman.pdf file.</li>
+<li>For the profiler file refer to the test/test.txt</li>
+</ol>
 <h3><a class="anchor" id="autotoc_md3"></a>
-Saving the prediction to sql.</h3>
-<p >` .mode csv \ .import data/test_pred_true.csv oopd \ .save data/oopd_pred_true.db ` </p>
-</div></div><!-- contents -->
+Model specifications</h3>
+<div class="fragment"><div class="line">i_d = 784 # input dimension  </div>
+<div class="line">m_d = 100 # no of cells in the mid layer  </div>
+<div class="line">o_d = 10 # output dimension  </div>
+<div class="line"> </div>
+<div class="line">epoch = 1 # we trainn for 1 epoch only  </div>
+<div class="line">act = &#39;relu&#39; # activation type  </div>
+<div class="line">lr = 0.00001 # learning rate  </div>
+<div class="line"> </div>
+<div class="line">X,Y,X_test,Y_test = train_features, train_label, test_features, test_label  </div>
+</div><!-- fragment --><ol type="1">
+<li>example2l (2l &gt; 2 layer) class has implements the training and testting of the 2 layer network. <br  />
+</li>
+<li>We achieve an accuracy of 95 percent with these hyperparameters. <br  />
+</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Run these commands to set up the environment. We need conda to be installed. If not than you have to manually install the dependencies.</h2>
+<div class="fragment"><div class="line">conda env create -f environment.yml  &lt;br/&gt;</div>
+<div class="line">conda activate oopd  &lt;br/&gt;</div>
+<div class="line">python setup.py sdist bdist_wheel  &lt;br/&gt;</div>
+<div class="line">pip install dist/ann-0.0.1-py3-none-any.whl</div>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md5"></a>
+Run these commands to extract the MNIST dataset and to train the example network on it.</h2>
+<div class="fragment"><div class="line">tar -xvf data.tar.gz &lt;br/&gt;</div>
+<div class="line">python run.py</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+Run these commands to save the prediction to a sql database.</h2>
+<div class="fragment"><div class="line">.mode csv &lt;br/&gt;</div>
+<div class="line">.import data/test_pred_true.csv oopd &lt;br/&gt;</div>
+<div class="line">.save data/oopd_pred_true.db </div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
