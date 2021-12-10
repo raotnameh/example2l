@@ -1,0 +1,72 @@
+\hypertarget{classann_1_1loss_1_1Cross__Ent__Loss}{}\doxysection{ann.\+loss.\+Cross\+\_\+\+Ent\+\_\+\+Loss Class Reference}
+\label{classann_1_1loss_1_1Cross__Ent__Loss}\index{ann.loss.Cross\_Ent\_Loss@{ann.loss.Cross\_Ent\_Loss}}
+Inheritance diagram for ann.\+loss.\+Cross\+\_\+\+Ent\+\_\+\+Loss\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classann_1_1loss_1_1Cross__Ent__Loss}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classann_1_1loss_1_1Cross__Ent__Loss_ae05e1feb6af03ee2f6b230bb81359fad}{forward\+\_\+loss}} (self, logits, true)
+\item 
+def \mbox{\hyperlink{classann_1_1loss_1_1Cross__Ent__Loss_a5d0a81c45037e6fd3f249f23684e6aef}{backward\+\_\+loss}} (self)
+\item 
+def \mbox{\hyperlink{classann_1_1loss_1_1Cross__Ent__Loss_a227adb4b8dfa379ecb68c56a9d70d0a8}{softmax}} (self, x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classann_1_1loss_1_1Cross__Ent__Loss_abc2363d497607c4e018ac4f1512ddd5d}\label{classann_1_1loss_1_1Cross__Ent__Loss_abc2363d497607c4e018ac4f1512ddd5d}} 
+{\bfseries pred}
+\item 
+\mbox{\Hypertarget{classann_1_1loss_1_1Cross__Ent__Loss_aaf2e520bd75a751de912b9b1d8800473}\label{classann_1_1loss_1_1Cross__Ent__Loss_aaf2e520bd75a751de912b9b1d8800473}} 
+{\bfseries true}
+\item 
+\mbox{\Hypertarget{classann_1_1loss_1_1Cross__Ent__Loss_ac8d5c9fa5cf04c1568101c06640c2b2c}\label{classann_1_1loss_1_1Cross__Ent__Loss_ac8d5c9fa5cf04c1568101c06640c2b2c}} 
+{\bfseries z}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Applies the combined cross entropy and softmax loss function element-wise. 
+For easier backprop calculation.
+
+Args:
+    None
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classann_1_1loss_1_1Cross__Ent__Loss_a5d0a81c45037e6fd3f249f23684e6aef}\label{classann_1_1loss_1_1Cross__Ent__Loss_a5d0a81c45037e6fd3f249f23684e6aef}} 
+\index{ann.loss.Cross\_Ent\_Loss@{ann.loss.Cross\_Ent\_Loss}!backward\_loss@{backward\_loss}}
+\index{backward\_loss@{backward\_loss}!ann.loss.Cross\_Ent\_Loss@{ann.loss.Cross\_Ent\_Loss}}
+\doxysubsubsection{\texorpdfstring{backward\_loss()}{backward\_loss()}}
+{\footnotesize\ttfamily def ann.\+loss.\+Cross\+\_\+\+Ent\+\_\+\+Loss.\+backward\+\_\+loss (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Implements the backprop calculation.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1loss_1_1Cross__Ent__Loss_ae05e1feb6af03ee2f6b230bb81359fad}\label{classann_1_1loss_1_1Cross__Ent__Loss_ae05e1feb6af03ee2f6b230bb81359fad}} 
+\index{ann.loss.Cross\_Ent\_Loss@{ann.loss.Cross\_Ent\_Loss}!forward\_loss@{forward\_loss}}
+\index{forward\_loss@{forward\_loss}!ann.loss.Cross\_Ent\_Loss@{ann.loss.Cross\_Ent\_Loss}}
+\doxysubsubsection{\texorpdfstring{forward\_loss()}{forward\_loss()}}
+{\footnotesize\ttfamily def ann.\+loss.\+Cross\+\_\+\+Ent\+\_\+\+Loss.\+forward\+\_\+loss (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{logits,  }\item[{}]{true }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Args: 
+    logits: Predicted vector of shape [num_classes,1].
+    true: truth vector of shape [num_classes,1]. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1loss_1_1Cross__Ent__Loss_a227adb4b8dfa379ecb68c56a9d70d0a8}\label{classann_1_1loss_1_1Cross__Ent__Loss_a227adb4b8dfa379ecb68c56a9d70d0a8}} 
+\index{ann.loss.Cross\_Ent\_Loss@{ann.loss.Cross\_Ent\_Loss}!softmax@{softmax}}
+\index{softmax@{softmax}!ann.loss.Cross\_Ent\_Loss@{ann.loss.Cross\_Ent\_Loss}}
+\doxysubsubsection{\texorpdfstring{softmax()}{softmax()}}
+{\footnotesize\ttfamily def ann.\+loss.\+Cross\+\_\+\+Ent\+\_\+\+Loss.\+softmax (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Implements the softmax dunction element wise.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ann/loss.\+py\end{DoxyCompactItemize}

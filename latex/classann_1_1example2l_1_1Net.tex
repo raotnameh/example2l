@@ -1,0 +1,161 @@
+\hypertarget{classann_1_1example2l_1_1Net}{}\doxysection{ann.\+example2l.\+Net Class Reference}
+\label{classann_1_1example2l_1_1Net}\index{ann.example2l.Net@{ann.example2l.Net}}
+Inheritance diagram for ann.\+example2l.\+Net\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.728395cm]{classann_1_1example2l_1_1Net}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classann_1_1example2l_1_1Net_a167ed7f9a6bb190366a7c8bbd55bdaf2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, i\+\_\+d, m\+\_\+d, o\+\_\+d, act, lr, epoch, X, Y, X\+\_\+test, Y\+\_\+test)
+\item 
+def \mbox{\hyperlink{classann_1_1example2l_1_1Net_a038468fcbd9901adb57be61797145539}{forward}} (self, x)
+\item 
+def \mbox{\hyperlink{classann_1_1example2l_1_1Net_ad13e487d1a6302d54d7abc0fca12cf80}{backward}} (self)
+\item 
+def \mbox{\hyperlink{classann_1_1example2l_1_1Net_ab007187f78c0432b475b2822f14c625f}{update}} (self)
+\item 
+def \mbox{\hyperlink{classann_1_1example2l_1_1Net_aec17d7214c84b1b1013bfe192e70d6cb}{reset}} (self)
+\item 
+def \mbox{\hyperlink{classann_1_1example2l_1_1Net_a29284140fcab44eadd24512ab55dc8ea}{loss}} (self, pred, index)
+\item 
+def \mbox{\hyperlink{classann_1_1example2l_1_1Net_a350ac693ff193aa5387b48a7279408f4}{evaluate}} (self, X=None, Y=None)
+\item 
+def \mbox{\hyperlink{classann_1_1example2l_1_1Net_a281f2d7a528c3b4b1b9203c3a7e5ec05}{train}} (self, step\+\_\+u=1, step=100000, test=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classann_1_1example2l_1_1Net_a4e60629ea92177c9d073c7808bce9e09}\label{classann_1_1example2l_1_1Net_a4e60629ea92177c9d073c7808bce9e09}} 
+{\bfseries alpha}
+\item 
+\mbox{\Hypertarget{classann_1_1example2l_1_1Net_a6efbe0313ad2312393ea51af02b8d320}\label{classann_1_1example2l_1_1Net_a6efbe0313ad2312393ea51af02b8d320}} 
+{\bfseries epoch}
+\item 
+\mbox{\Hypertarget{classann_1_1example2l_1_1Net_a24d9afdce626ca4d8d001ada6e3898e7}\label{classann_1_1example2l_1_1Net_a24d9afdce626ca4d8d001ada6e3898e7}} 
+{\bfseries layer1}
+\item 
+\mbox{\Hypertarget{classann_1_1example2l_1_1Net_a8a117424e74da66c7f6e8cfde2950298}\label{classann_1_1example2l_1_1Net_a8a117424e74da66c7f6e8cfde2950298}} 
+{\bfseries act1}
+\item 
+\mbox{\Hypertarget{classann_1_1example2l_1_1Net_a718a3ec418b2da111ef061a474dfdd78}\label{classann_1_1example2l_1_1Net_a718a3ec418b2da111ef061a474dfdd78}} 
+{\bfseries layer2}
+\item 
+\mbox{\Hypertarget{classann_1_1example2l_1_1Net_ab4feab32acb542bcbc48e43192ee6921}\label{classann_1_1example2l_1_1Net_ab4feab32acb542bcbc48e43192ee6921}} 
+{\bfseries cross\+\_\+ent\+\_\+loss}
+\item 
+\mbox{\Hypertarget{classann_1_1example2l_1_1Net_a7ebd5933ab7a0266afcee9d28074e111}\label{classann_1_1example2l_1_1Net_a7ebd5933ab7a0266afcee9d28074e111}} 
+{\bfseries Y}
+\item 
+\mbox{\Hypertarget{classann_1_1example2l_1_1Net_a4ab86279e1bd485169407da73f101797}\label{classann_1_1example2l_1_1Net_a4ab86279e1bd485169407da73f101797}} 
+{\bfseries Y\+\_\+test}
+\item 
+\mbox{\Hypertarget{classann_1_1example2l_1_1Net_a9d1e712549bd9d7508e05b7a389d10d4}\label{classann_1_1example2l_1_1Net_a9d1e712549bd9d7508e05b7a389d10d4}} 
+{\bfseries X\+\_\+test}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Create a sample 2 layer feed forward artitifical neural network (ANN).
+
+Args:
+    i_d: input dimension.
+    m_d: number of cells in 1st layer. 
+    o_d: output dimension.
+    act: activation function to use.
+    lr: Learning rate
+    epoch: number of epochs to train. 
+    X: training input [60000,784].
+    Y: training output [60000,1].
+    X_test = test input [10000,784].
+    Y_test = test output [10000,1].
+
+Returns:
+    None
+
+Example:
+    i_d, m_d, o_d = 784, 100, 10
+    act = 'relu'
+    lr,epoch = 0.00001,10
+    X,Y,X_test,Y_test = data.Mnist(path='data').data()
+    net = example2l.Net(i_d,m_d,o_d,act, lr,epoch, X,Y,X_test,Y_test)
+    net.train()\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classann_1_1example2l_1_1Net_a167ed7f9a6bb190366a7c8bbd55bdaf2}\label{classann_1_1example2l_1_1Net_a167ed7f9a6bb190366a7c8bbd55bdaf2}} 
+\index{ann.example2l.Net@{ann.example2l.Net}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!ann.example2l.Net@{ann.example2l.Net}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def ann.\+example2l.\+Net.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{i\+\_\+d,  }\item[{}]{m\+\_\+d,  }\item[{}]{o\+\_\+d,  }\item[{}]{act,  }\item[{}]{lr,  }\item[{}]{epoch,  }\item[{}]{X,  }\item[{}]{Y,  }\item[{}]{X\+\_\+test,  }\item[{}]{Y\+\_\+test }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classann_1_1layer_1_1Linear}{ann.\+layer.\+Linear}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classann_1_1example2l_1_1Net_ad13e487d1a6302d54d7abc0fca12cf80}\label{classann_1_1example2l_1_1Net_ad13e487d1a6302d54d7abc0fca12cf80}} 
+\index{ann.example2l.Net@{ann.example2l.Net}!backward@{backward}}
+\index{backward@{backward}!ann.example2l.Net@{ann.example2l.Net}}
+\doxysubsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily def ann.\+example2l.\+Net.\+backward (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calls backprop fucntion for each layer to calculate the gradients.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1example2l_1_1Net_a350ac693ff193aa5387b48a7279408f4}\label{classann_1_1example2l_1_1Net_a350ac693ff193aa5387b48a7279408f4}} 
+\index{ann.example2l.Net@{ann.example2l.Net}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!ann.example2l.Net@{ann.example2l.Net}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily def ann.\+example2l.\+Net.\+evaluate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{X = {\ttfamily None},  }\item[{}]{Y = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Evaulate the created model given the test data. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1example2l_1_1Net_a038468fcbd9901adb57be61797145539}\label{classann_1_1example2l_1_1Net_a038468fcbd9901adb57be61797145539}} 
+\index{ann.example2l.Net@{ann.example2l.Net}!forward@{forward}}
+\index{forward@{forward}!ann.example2l.Net@{ann.example2l.Net}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily def ann.\+example2l.\+Net.\+forward (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calls the forward fucntion for each layer. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1example2l_1_1Net_a29284140fcab44eadd24512ab55dc8ea}\label{classann_1_1example2l_1_1Net_a29284140fcab44eadd24512ab55dc8ea}} 
+\index{ann.example2l.Net@{ann.example2l.Net}!loss@{loss}}
+\index{loss@{loss}!ann.example2l.Net@{ann.example2l.Net}}
+\doxysubsubsection{\texorpdfstring{loss()}{loss()}}
+{\footnotesize\ttfamily def ann.\+example2l.\+Net.\+loss (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pred,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate the cross entropy loss.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1example2l_1_1Net_aec17d7214c84b1b1013bfe192e70d6cb}\label{classann_1_1example2l_1_1Net_aec17d7214c84b1b1013bfe192e70d6cb}} 
+\index{ann.example2l.Net@{ann.example2l.Net}!reset@{reset}}
+\index{reset@{reset}!ann.example2l.Net@{ann.example2l.Net}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily def ann.\+example2l.\+Net.\+reset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calls the reset fucntion of each layer to reset the gradients back to 0.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1example2l_1_1Net_a281f2d7a528c3b4b1b9203c3a7e5ec05}\label{classann_1_1example2l_1_1Net_a281f2d7a528c3b4b1b9203c3a7e5ec05}} 
+\index{ann.example2l.Net@{ann.example2l.Net}!train@{train}}
+\index{train@{train}!ann.example2l.Net@{ann.example2l.Net}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily def ann.\+example2l.\+Net.\+train (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{step\+\_\+u = {\ttfamily 1},  }\item[{}]{step = {\ttfamily 100000},  }\item[{}]{test = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Train the created model given the input.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classann_1_1example2l_1_1Net_ab007187f78c0432b475b2822f14c625f}\label{classann_1_1example2l_1_1Net_ab007187f78c0432b475b2822f14c625f}} 
+\index{ann.example2l.Net@{ann.example2l.Net}!update@{update}}
+\index{update@{update}!ann.example2l.Net@{ann.example2l.Net}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily def ann.\+example2l.\+Net.\+update (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calls the update fucntion of each layer to update the gradients. 
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ann/example2l.\+py\end{DoxyCompactItemize}
